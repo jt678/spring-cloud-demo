@@ -1,0 +1,17 @@
+# 应用端口
+server:
+  port: 7979
+spring:
+  application:
+    # 应用名称
+    name: provider-user-jt
+
+# eureka 配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://jt:123456@localhost:9898/eureka
+
+logging:
+  level:
+    root: INFO
