@@ -1,20 +1,19 @@
-package com.jt.jcloudconsumerfeign.service;
+package com.jt.jcloudconsumerfeignhystrix.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
- * UserService
- *
+ * UserClient
+ * 这里只是调用第三方接口，不需要实现
  * @Author: jt
- * @Date: 2022/7/22 10:27
+ * @Date: 2022/7/26 14:25
  */
-//指定服务提供者的名称（可能有多个实例）
+//指定要调用的服务名
 @FeignClient("PROVIDER-USER-JT")
-public interface UserService {
-    //调用提供者的具体接口
-    @GetMapping("user/sayHello")
+public interface UserClient {
+
+    @GetMapping("/user/sayHello")
     public String sayHello();
 
     @GetMapping("/user/sayHi")

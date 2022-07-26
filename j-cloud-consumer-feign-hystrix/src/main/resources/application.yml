@@ -1,0 +1,14 @@
+server:
+  port: 3548
+spring:
+  application:
+    name: consumer-feignHystrix-jt1
+
+# eureka 配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://jt:123456@localhost:9898/eureka
+logging:
+  level:
+    root: INFO
