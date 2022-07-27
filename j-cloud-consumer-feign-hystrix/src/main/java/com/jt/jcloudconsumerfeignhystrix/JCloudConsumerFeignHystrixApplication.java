@@ -18,6 +18,7 @@ import java.net.UnknownHostException;
 @Slf4j
 @EnableEurekaClient
 @EnableFeignClients(basePackages = "com.jt.*")
+//@EnableCircuitBreaker已经被包含再EnableHystrix中
 @EnableHystrix
 public class JCloudConsumerFeignHystrixApplication {
 

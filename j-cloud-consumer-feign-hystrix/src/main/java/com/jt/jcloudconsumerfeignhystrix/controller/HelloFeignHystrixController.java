@@ -38,16 +38,16 @@ public class HelloFeignHystrixController {
 
     /**
      *
-     *  对应上面的方法，参数必须一致，当访问失败时，hystrix直接回调用此方法
+     *  对应上面的方法，参数必须一致，当访问失败时，hystrix直接回调用此方法，熔断后别的服务就不会再调用这个方法
      * @return 失败调用时，返回默认值:
      */
     public String helloFailback(){
-        return "错误返回====hello";
+        return "这是Hystrix错误返回====hello已经熔断";
     }
     public String hiFailback(){
-        return "错误返回====hi";
+        return "这是Hystrix错误返回====hi已经熔断";
     }
     public String hahaFailback(){
-        return "错误返回====haha";
+        return "这是Hystrix错误返回====haha已经熔断";
     }
 }
