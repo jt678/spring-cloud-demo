@@ -1,0 +1,16 @@
+server:
+  port: 5107
+
+spring:
+  application:
+    name: gateway-zuul1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://jt:123456@localhost:9898/eureka
+zuul:
+  ignored-services: '*'
+  routes:
+    app-j:
+      path: /user/*
+      serviceId: provider-user-jt
