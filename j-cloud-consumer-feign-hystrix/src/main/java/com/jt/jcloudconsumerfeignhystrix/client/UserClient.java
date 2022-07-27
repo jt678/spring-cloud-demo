@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @FeignClient("PROVIDER-USER-JT")
 public interface UserClient {
 
-    @GetMapping("/user/sayHello")
+    @GetMapping("user/sayHello")
     public String sayHello();
 
-    @GetMapping("/user/sayHi")
+    @GetMapping("user/sayHi")
     public String sayHi();
 
-    @GetMapping("/user/sayHaha")
+    @GetMapping("user/sayHaha")
     public String sayHaha();
 }
